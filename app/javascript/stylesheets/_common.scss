@@ -1,0 +1,11 @@
+.enable-show-more{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  &.more-line{
+    -webkit-line-clamp: 4;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+}
