@@ -1,0 +1,18 @@
+@import 'bootstrap/scss/bootstrap';
+
+body{
+    background-color: rgb(228, 161, 219);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.item{
+    cursor: pointer;
+    &:hover{
+        box-shadow: rgb(43, 41, 43) 5px 5px 15px;
+    }
+    
+}
