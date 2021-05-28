@@ -1,6 +1,9 @@
 @import 'bootstrap/scss/bootstrap';
+<<<<<<< HEAD
 @import './common';
 @import './product';
+=======
+>>>>>>> 558ed2e48988299334f376792df46159456b5174
 
 body{
     background-color: rgb(228, 161, 219);
@@ -11,3 +14,13 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+<<<<<<< HEAD
+=======
+.item{
+    cursor: pointer;
+    &:hover{
+        box-shadow: rgb(43, 41, 43) 5px 5px 15px;
+    }
+    
+}
+>>>>>>> 558ed2e48988299334f376792df46159456b5174
