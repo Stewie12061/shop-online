@@ -15,3 +15,6 @@ ActiveStorage.start()
 
 import '../stylesheets/application'
 import 'bootstrap'
+
+const images = require.context("../images", true);
+const imagePath = (name) => images(name, true)
