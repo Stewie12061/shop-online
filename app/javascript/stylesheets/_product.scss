@@ -4,8 +4,9 @@
       box-shadow: rgb(43, 41, 43) 5px 5px 20px;
   }
   .img{
-    width: 100%;
-    height: 250px;
+    margin: auto;
+    width: 50%;
+    height: 200px;
     img{
       width: 100%;
       height: 100%;
@@ -15,5 +16,12 @@
     max-height: 96px;
     min-height: 96px;
   }
+  .product-item{
+    width: 20rem;
+  }
  
+}
+.product{
+  width: 86%;
+  margin: auto;
 }
