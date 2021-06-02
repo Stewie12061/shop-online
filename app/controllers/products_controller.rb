@@ -1,6 +1,16 @@
 class ProductsController < ApplicationController
+  before_action :fetch_product
     def index
-      @products=[
+    end
+
+    def show
+      @product = @products.filter{|product| product.id == params[:id].to_i}.first
+      p @product
+      p params
+    end
+  private
+  def fetch_product
+    @products=[
         {
         id: 1,
         title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -183,5 +193,5 @@ class ProductsController < ApplicationController
         ]
         @products = @products.map{|product| OpenStruct.new(product.merge({sale?: true})) }
       p @products
-    end
+  end
 end

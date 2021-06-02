@@ -1,4 +1,5 @@
 <div class="item d-sm-inline-block mb-2">
+  <a href="<%= product_path(product.id) %>">
     <div class="card product-item">
       <div class="img">
         <img src="<%= product.image %>" class="card-img-top" alt="...">
@@ -8,27 +9,12 @@
 
         <p class="card-text enable-show-more more-line m96"><%= product.description %></p>
 
-        <div class="row">
-          <% if product.sale? %>
-            <div class="col-6">
-              <h2 class="card-text price sale text-end"><%= product.price %></h2>
-            </div>
-            <div class="col-6">
-              <h2 class="card-text price"><%= product.price %></h2>
-            </div>
-          <% else %>
-            <div class="col-6">
-              
-            </div>
-            <div class="col-6">
-              <h2 class="card-text price"><%= product.price %></h2>
-            </div>
-          <% end %>
-        </div>
-
+        <%= render partial: 'products/partials/price', locals:{ product: product} %>
+        
         <p class="card-text"><%= product.category %></p>
 
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
+  </a>
 </div>
