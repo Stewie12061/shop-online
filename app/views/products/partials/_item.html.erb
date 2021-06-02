@@ -5,9 +5,29 @@
       </div>
       <div class="card-body">
         <h5 class="card-title enable-show-more"><%= product.title %></h5>
+
         <p class="card-text enable-show-more more-line m96"><%= product.description %></p>
-        <h2 class="card-text"><%= product.price %></h2>
+
+        <div class="row">
+          <% if product.sale? %>
+            <div class="col-6">
+              <h2 class="card-text price sale text-end"><%= product.price %></h2>
+            </div>
+            <div class="col-6">
+              <h2 class="card-text price"><%= product.price %></h2>
+            </div>
+          <% else %>
+            <div class="col-6">
+              
+            </div>
+            <div class="col-6">
+              <h2 class="card-text price"><%= product.price %></h2>
+            </div>
+          <% end %>
+        </div>
+
         <p class="card-text"><%= product.category %></p>
+
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>

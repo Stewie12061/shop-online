@@ -181,7 +181,7 @@ class ProductsController < ApplicationController
         image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
         }
         ]
-      @products = @products.map{|product| OpenStruct.new(product) }
+        @products = @products.map{|product| OpenStruct.new(product.merge({sale?: true})) }
       p @products
     end
 end
