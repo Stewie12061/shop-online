@@ -34,3 +34,11 @@ vi:
     about: "Giới Thiệu"
     products: "Sản Phẩm"
     contact: "Liên Hệ"
+
+  product:
+    brand: Thương hiệu
+    description: Mô tả
+    size: Kích thước
+    quantity: Số lượng
+    buy: Mua hàng
+    addtocart: Thêm vào giỏ

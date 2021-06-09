@@ -193,5 +193,5 @@ class ProductsController < ApplicationController
         ]
         @products = @products.map{|product| OpenStruct.new(product.merge({sale?: true})) }
       p @products
-  end
+    end
 end

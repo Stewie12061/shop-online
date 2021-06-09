@@ -34,3 +34,11 @@ en:
     about: "About"
     products: "Products"
     contact: "Contact"
+  
+  product:
+    brand: Brand
+    description: Description
+    size: Size
+    quantity: Quantity
+    buy: Buy
+    addtocart: Add To Cart
