@@ -19,10 +19,10 @@
       </ul>
 
       <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item">
+        <li class="nav-item" data-controller='lang'>
           <div class="nav-link">
             <%= label_tag "language", "Language", class: "float-left mr-2" %>
-            <%= select_tag "language", options_from_collection_for_select(@languages, :id, :value, locale.to_sym) %>
+            <%= select_tag "language", options_from_collection_for_select(@languages, :id, :value, locale.to_sym), {data: {action: 'change-> lang#switchLang'}} %>
           </div>
         </li>
       </ul>
