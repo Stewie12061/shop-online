@@ -5,6 +5,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
+
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="<%= products_path %>"><%=  t('menu.products') %></a>
@@ -15,12 +16,17 @@
         <li class="nav-item">
           <a class="nav-link" href="<%= contact_path %>"><%= t('menu.contact') %></a>
         </li>
-
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <div class="nav-link">
+            <%= label_tag "language", "Language", class: "float-left mr-2" %>
+            <%= select_tag "language", options_from_collection_for_select(@languages, :id, :value, locale.to_sym) %>
+          </div>
+        </li>
+      </ul>
+
     </div>
   </div>
 </nav>
