@@ -1,0 +1,27 @@
+#cart{
+    width: 110px;
+    position: fixed;
+    height: 100px;
+    background-color: blueviolet;
+    right: 0;
+    top: 150px;
+    z-index: 9999;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    .cart{
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        margin-top: -40px;
+    }
+    .cart-icon{
+        position: relative;
+        font-size: 45px;
+        background: pink;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        line-height: 80px;
+        text-align: center;
+    }
+}
