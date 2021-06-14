@@ -11,9 +11,17 @@
 
         <%= render partial: 'products/partials/price', locals:{ product: product} %>
         
-        <p class="card-text"><%= product.category %></p>
+        <p class="card-text text-capitalize mb-2"><%= product.category %></p>
 
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="row">
+          <div class="col">
+            <a href="#" class="btn btn-primary w-100 text-capitalize"><%= t('product.buy') %></a>
+          </div>
+          <div class="col">
+            <a href="#" class="btn btn-primary w-100 text-capitalize"><%= t('product.addtocart') %></a>
+          </div>
+        </div>
+
       </div>
     </div>
   </a>
