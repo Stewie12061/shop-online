@@ -143,15 +143,13 @@
                 <h6><%= t('product.brand') %>:</h6>
               </li>
               <li class="list-inline-item">
-                <p class="text-muted"><strong>Easy Wear</strong></p>
+                <p class="text-muted text-capitalize"><strong>Easy Wear</strong></p>
               </li>
             </ul>
 
             <h6><%= t('product.description') %>:</h6>
-            <p>
-              <%= product.description %>
-            </p>
-
+            
+            <p class="product-description"><%= product.description %></p>
 
             <form action="" method="GET">
               <input type="hidden" name="product-title" value="Activewear">

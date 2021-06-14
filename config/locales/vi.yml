@@ -30,6 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 vi:
+  lang:
+    en: "Tiếng Anh"
+    vi: "Tiếng Việt"
+    
   menu:
     about: "Giới Thiệu"
     products: "Sản Phẩm"

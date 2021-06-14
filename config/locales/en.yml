@@ -30,6 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  lang:
+    en: "Tiếng Anh"
+    vi: "Tiếng Việt"
+
   menu:
     about: "About"
     products: "Products"

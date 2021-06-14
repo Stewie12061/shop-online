@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     before_action :set_locale
-    before_action :fetch_language
+    around_action :fetch_language
     private
     def set_locale
         p session[:locale]
@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
     end
 
     def fetch_language
-        @languages = [{value: 'Tiếng Việt', id: :vi}, {value: 'English', id: :en}].map{|l| OpenStruct.new(l)}
+        @languages = [{value: I18n.t('lang.vi'), id: :vi}, {value: I18n.t('lang.en'), id: :en}].map{|l| OpenStruct.new(l)}
+        yield
     end
 end
