@@ -23,5 +23,26 @@
         border-radius: 50%;
         line-height: 80px;
         text-align: center;
+        &.q-10 {
+            &:after{
+           content: attr(data-quantity);
+           position: absolute;
+           color: black;
+           top: 5px;
+           right: 14px;
+           border-radius: 50%;
+           width: 30px;
+           height: 30px;
+           background-color: white;
+           margin-top: 10px;
+           line-height: 30px;
+           font-size: 21px;
+           }
+        }
+        .icon{
+            margin-left: -10px;
+            font-size: 32px;
+            position: relative;
+        }
     }
 }
