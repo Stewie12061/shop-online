@@ -2,7 +2,7 @@
     width: 110px;
     position: fixed;
     height: 100px;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(30, 40, 180, 0.8);
     right: 0;
     top: 150px;
     z-index: 9999;
@@ -15,9 +15,10 @@
         margin-top: -40px;
     }
     .cart-icon{
+        color: rgb(32, 44, 207);
         position: relative;
         font-size: 45px;
-        background: rgb(228, 161, 219);
+        background: rgb(123, 158, 223);
         width: 80px;
         height: 80px;
         border-radius: 50%;
