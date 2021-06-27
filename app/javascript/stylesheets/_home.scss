@@ -1,0 +1,62 @@
+.font-base{
+    font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.fs-7 {
+    font-size: 3.58318rem !important;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.bg-soft-primary {
+    background-color: #d9e7ff !important;
+}
+.bg-soft-warning {
+    background-color: #ffe9d9 !important;
+}
+.bg-soft-success {
+    background-color: #dff1e5 !important;
+}
+.badge-circle {
+    height: 4.4rem;
+    width: 4.4rem;
+    border-radius: 50%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+.badge {
+    line-height: 0.8125rem;
+}
+.badge {
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #FFFEFE;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+.text-primary {
+    color: #005DFF !important;
+}
+.text-warning {
+    color: #FF6A00 !important;
+}
+.text-success {
+    color: #28A154 !important;
+}
+.align-items-center {
+    -webkit-box-align: center !important;
+    align-items: center !important;
+}
+.flex-column {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    flex-direction: column !important;
+}
+.flex-center {
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
