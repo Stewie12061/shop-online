@@ -7,8 +7,14 @@ import Splide from '@splidejs/splide'
 export default class extends ApplicationController {
     static targets = ['primary']
     options = {
+        fixedWith: 350,
+        fixedHeight: 350,
+        perPage: 3,
+        gap: 30,
+        pagination: false,
         autoplay: true,
-        type: 'fade',
+        interval: 3000,
+        type: 'slide',
         arrow: false,
         cover: true,
         lazyLoad: 'nearby'
