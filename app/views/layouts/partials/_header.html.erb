@@ -1,32 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="<%= root_path %>">Shop-Online</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
+<div data-controller='scroll'>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed" data-scroll-target="primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="<%= root_path %>">Shop-Online</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
 
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<%= products_path %>"><%=  t('menu.products') %></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<%= about_path %>"><%= t('menu.about') %></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<%= contact_path %>"><%= t('menu.contact') %></a>
-        </li>
-      </ul>
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="<%= products_path %>"><%=  t('menu.products') %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= about_path %>"><%= t('menu.about') %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= contact_path %>"><%= t('menu.contact') %></a>
+          </li>
+        </ul>
 
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item" data-controller='lang'>
-          <div class="nav-link">
-            <%= label_tag "language", "Language", class: "float-left mr-2" %>
-            <%= select_tag "language", options_from_collection_for_select(@languages, :id, :value, locale.to_sym), {data: {action: 'change-> lang#switchLang'}} %>
-          </div>
-        </li>
-      </ul>
-
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item" data-controller='lang'>
+            <div class="nav-link">
+              <%= label_tag "language", "Language", class: "float-left mr-2" %>
+              <%= select_tag "language", options_from_collection_for_select(@languages, :id, :value, locale.to_sym), {data: {action: 'change-> lang#switchLang'}} %>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+  <span id="go-top" class="rounded-circle bg-warning text-white text-center align-middle d-none" data-action='click->scroll#gotoTop'>
+    <i class='fas fa-angle-up'></i>
+  </span>
+</div>
