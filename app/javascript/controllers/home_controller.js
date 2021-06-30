@@ -27,11 +27,11 @@ export default class extends ApplicationController {
         this.initSplide()
     }
     initialize(){
-      document.addEventListener('cable-ready:after-morph', this.reconnect.bin(this))
-      }
-      reconnect(){
+      document.addEventListener('cable-ready:after-morph', this.reconnect.bind(this))
+    }
+    reconnect(){
         this.initSplide()
-      }
+    }
 
     initSplide(){
         const observer = lozad(); // lazy loads elements with default selector as '.lozad'

@@ -4,23 +4,24 @@ import lozad from 'lozad'
 export default class extends ApplicationController {
   static targets = ['primary']
 
-  connect () {
+  connect() {
     super.connect()
     console.log('abc')
     this.onScroll();
   }
 
-  initialize(){
-    document.addEventListener('cable-ready:after-morph', this.reconnect.bin(this))
-    }
-    reconnect(){
-      this.onScroll();
-    }
-    onScroll(){
-      let self = this
-      window.addEventListener("scroll", function () {
-        // when position > 117 will fix navbar
-        self.showTopBtn()
+  initialize() {
+    document.addEventListener('cable-ready:after-morph', this.reconnect.bind(this))
+  }
+  reconnect() {
+    this.onScroll();
+  }
+  onScroll() {
+    let self = this
+    self.showTopBtn()
+    window.addEventListener("scroll", function () {
+      // when position > 117 will fix navbar
+      self.showTopBtn()
     })
   }
 
@@ -37,6 +38,7 @@ export default class extends ApplicationController {
   }
 
   gotoTop(event) {
+    console.log('abc')
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
